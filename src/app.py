@@ -8,7 +8,7 @@ from retriever import retrieve_chunks
 # Streamlit page setup
 st.set_page_config(page_title="🌾 Rice Farming Agent", layout="wide")
 
-st.markdown("## 🌾 Rice Farming Assistance Agent")
+#st.markdown("## 🌾 Rice Farming Assistance Agent")
 
 # Banner
 # img = Image.open("Rice Farming.png")
@@ -16,7 +16,7 @@ st.markdown("## 🌾 Rice Farming Assistance Agent")
 img_path = os.path.join(os.path.dirname(__file__), "Rice Farming.png")
 img = Image.open(img_path)
 st.image(img.resize((700, 400)))
-#st.markdown("## 🌾 Rice Farming Assistance Agent")
+st.markdown("## 🌾 Rice Farming Assistance Agent")
 st.divider()
 
 # Init session
