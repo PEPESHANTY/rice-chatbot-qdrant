@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 from PIL import Image
 from ragchain_langchain import qa_chain  # must expose qa_chain
@@ -7,10 +8,15 @@ from retriever import retrieve_chunks
 # Streamlit page setup
 st.set_page_config(page_title="🌾 Rice Farming Agent", layout="wide")
 
-# Banner
-img = Image.open("Rice Farming.png")
-st.image(img.resize((700, 400)))
 st.markdown("## 🌾 Rice Farming Assistance Agent")
+
+# Banner
+# img = Image.open("Rice Farming.png")
+# st.image(img.resize((700, 400)))
+img_path = os.path.join(os.path.dirname(__file__), "Rice Farming.png")
+img = Image.open(img_path)
+st.image(img.resize((700, 400)))
+#st.markdown("## 🌾 Rice Farming Assistance Agent")
 st.divider()
 
 # Init session
